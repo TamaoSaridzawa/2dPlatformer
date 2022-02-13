@@ -10,7 +10,7 @@ public class CoinSpawner : MonoBehaviour
     private List<GameObject> _coins = new List<GameObject>();
     private Transform[] _points;
 
-    void Start()
+    private void Start()
     {
         _points = new Transform[_path.childCount];
 
@@ -26,7 +26,7 @@ public class CoinSpawner : MonoBehaviour
         _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }
 
-    public void Show()
+    public void Generate()
     {
         _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }

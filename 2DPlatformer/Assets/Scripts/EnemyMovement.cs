@@ -8,9 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float _distanceGround = 2f;
     [SerializeField] private float _speed;
 
-    private bool _moveRight = true;
-
-    void Start()
+    private void Start()
     {
         StartCoroutine(Patrol());
     }
@@ -25,18 +23,17 @@ public class EnemyMovement : MonoBehaviour
 
             if (groundCheck.collider == false)
             {
-                if (_moveRight)
+                if (transform.rotation.y == 0)
                 {
-                    transform.eulerAngles = new Vector3(0, -180, 0);
-                    _moveRight = false;
+                    transform.localRotation = Quaternion.Euler(0, 180, 0);
                 }
                 else
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
-                    _moveRight = true;
+                    transform.localRotation = Quaternion.Euler(0, 0, 0);
                 }
             }
             yield return null;
         }
     }
+
 }
