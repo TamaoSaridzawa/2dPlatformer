@@ -38,34 +38,5 @@ public class EnemyMovement : MonoBehaviour
             }
             yield return null;
         }
-        //while (true)
-        //{
-        //    if (true)
-        //    {
-
-        //    }
-        //    transform.position = Vector3.MoveTowards(transform.position, _targetPosition.position, 1f * Time.deltaTime);
-
-        //    if (transform.position == _targetPosition.position)
-        //    {
-        //        Debug.Log("РАзворот");
-        //        _goalAchieved = true;
-        //    }
-
-        //yield return null;
-        //}
-
-        //while (_goalAchieved)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, _startPosition.position, 1f * Time.deltaTime);
-
-        //    //if (transform.position == _startPosition.position)
-        //    //{
-        //    //    Debug.Log("Все сгачада");
-        //    //    _goalAchieved = false;
-        //    //}
-
-        //    yield return null;
-        //}
     }
 }

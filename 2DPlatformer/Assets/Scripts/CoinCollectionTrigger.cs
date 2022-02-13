@@ -8,10 +8,10 @@ public class CoinCollectionTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<PlayerManagement>(out PlayerManagement player))
+        if (collision.TryGetComponent(out PlayerManagement player))
         {
             gameObject.SetActive(false);
-            _spawner.GetObjects()[Random.Range(0, _spawner.GetObjects().Count)].SetActive(true);
+            _spawner.Show();
         }
     }
 }

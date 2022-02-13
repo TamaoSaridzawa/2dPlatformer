@@ -69,7 +69,6 @@ public class PlayerManagement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _rigidbody2D.AddForce(Vector3.up * _jumpForce);
-            //Idle();
         }
     }
 }

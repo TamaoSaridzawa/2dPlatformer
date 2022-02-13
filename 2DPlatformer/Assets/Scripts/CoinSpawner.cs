@@ -7,7 +7,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField] private Transform _path;
     [SerializeField] private GameObject _coin;
 
-    private List<GameObject> _gameObjects = new List<GameObject>();
+    private List<GameObject> _coins = new List<GameObject>();
     private Transform[] _points;
 
     void Start()
@@ -20,14 +20,14 @@ public class CoinSpawner : MonoBehaviour
 
             GameObject newCoin = Instantiate(_coin, new Vector3(0, 0, 0), Quaternion.identity);
             newCoin.transform.position = _points[i].position;
-            _gameObjects.Add(newCoin);
+            _coins.Add(newCoin);
         }
 
-        _gameObjects[Random.Range(0, _gameObjects.Count)].SetActive(true);
+        _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }
 
-    public IReadOnlyList<GameObject> GetObjects()
+    public void Show()
     {
-        return _gameObjects;
+        _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }
 }
