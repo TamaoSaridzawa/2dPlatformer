@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinInteracting : MonoBehaviour
+public class CoinDestroyer : MonoBehaviour
 {
     [SerializeField] private CoinSpawner _spawner;
 
@@ -11,7 +11,7 @@ public class CoinInteracting : MonoBehaviour
         if (collision.TryGetComponent(out Player player))
         {
             gameObject.SetActive(false);
-            _spawner.Generate();
+            _spawner.Spawn();
         }
     }
 }

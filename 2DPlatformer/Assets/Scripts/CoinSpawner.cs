@@ -26,7 +26,7 @@ public class CoinSpawner : MonoBehaviour
         _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }
 
-    public void Generate()
+    public void Spawn()
     {
         _coins[Random.Range(0, _coins.Count)].SetActive(true);
     }
